@@ -8,7 +8,7 @@ const saveMessage = require("./services/save.message");
 const getMessages = require("./services/get.messages");
 const leaveRoom = require("./utils/leave.room");
 
-app.use(cors()); // Add cors middleware
+app.use(cors());
 
 const server = http.createServer(app);
 
@@ -21,8 +21,8 @@ const io = new Server(server, {
 });
 
 const CHAT_BOT = "ChatBot";
-let chatRoom = ""; // E.g. javascript, node,...
-let allUsers = []; // All users in current chat room
+let chatRoom = "";
+let allUsers = [];
 
 // Listen for when the client connects via socket.io-client
 io.on("connection", (socket) => {
