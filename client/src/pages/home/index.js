@@ -15,7 +15,7 @@ const Home = ({ username, setUsername, room, setRoom, socket }) => {
   return (
     <div className={styles.container}>
       <div className={styles.formContainer}>
-        <h1>{`<>DevRooms</>`}</h1>
+        <h1>{`ChatGroup`}</h1>
         <input
           className={styles.input}
           placeholder="Username..."
@@ -26,7 +26,7 @@ const Home = ({ username, setUsername, room, setRoom, socket }) => {
           className={styles.input}
           onChange={(e) => setRoom(e.target.value)}
         >
-          <option>-- Select Room --</option>
+          <option>-- Select Room Channel--</option>
           <option value="helsinki">Helsinki</option>
           <option value="vaasa">Vaasa</option>
           <option value="tampere">Tampere</option>
